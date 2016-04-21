@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Bachlor Essay.dbo.Fundamentals' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Fundamentals">
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ticker" Type="nvarchar" MaxLength="255" />
+          <Property Name="Exchange" Type="nvarchar" MaxLength="255" />
+          <Property Name="ROA % _FY 1" Type="float" />
+          <Property Name="ROA % _FY 2" Type="float" />
+          <Property Name="ROA % _FY 3" Type="float" />
+          <Property Name="ROA % _FY 4" Type="float" />
+          <Property Name="ROA % _FY 5" Type="float" />
+          <Property Name="ROE % _FY 1" Type="float" />
+          <Property Name="ROE % _FY 2" Type="float" />
+          <Property Name="ROE % _FY 3" Type="float" />
+          <Property Name="ROE % _FY 4" Type="float" />
+          <Property Name="ROE % _FY 5" Type="float" />
+          <Property Name="ROE % _FY 6" Type="float" />
+          <Property Name="ROE % _FY 7" Type="float" />
+          <Property Name="ROE % _FY 8" Type="float" />
+          <Property Name="ROE % _FY 9" Type="float" />
+          <Property Name="Annual _Dividend _2015" Type="float" />
+          <Property Name="Annual _Dividend _2014" Type="nvarchar" MaxLength="255" />
+          <Property Name="Annual _Dividend _2013" Type="float" />
+          <Property Name="Annual _Dividend _2012" Type="float" />
+          <Property Name="Annual _Dividend _2011" Type="float" />
+          <Property Name="Annual _Dividend _2010" Type="float" />
+          <Property Name="Annual _Dividend _2009" Type="float" />
+          <Property Name="Annual _Dividend _2008" Type="float" />
+          <Property Name="Annual _Ret _2015 _Base _Currency" Type="float" />
+          <Property Name="Annual _Ret _2014 _Base _Currency" Type="float" />
+          <Property Name="Annual _Ret _2013 _Base _Currency" Type="float" />
+          <Property Name="Annual _Ret _2012 _Base _Currency" Type="float" />
+          <Property Name="Annual _Ret _2011 _Base _Currency" Type="float" />
+          <Property Name="Annual _Ret _2010 _Base _Currency" Type="float" />
+          <Property Name="Annual _Ret _2009 _Base _Currency" Type="float" />
+          <Property Name="Annual _Ret _2008 _Base _Currency" Type="float" />
+          <Property Name="Asset Turnover _1 Yr - _FY9" Type="float" />
+          <Property Name="Asset Turnover _1 Yr - _FY8" Type="float" />
+          <Property Name="Asset Turnover _1 Yr - _FY7" Type="float" />
+          <Property Name="Asset Turnover _1 Yr - _FY6" Type="float" />
+          <Property Name="Asset Turnover _1 Yr - _FY5" Type="float" />
+          <Property Name="Asset Turnover _1 Yr - _FY4" Type="float" />
+          <Property Name="Asset Turnover _1 Yr - _FY3" Type="float" />
+          <Property Name="Asset Turnover _1 Yr - _FY2" Type="float" />
+          <Property Name="Asset Turnover _1 Yr - _FY1" Type="float" />
+          <Property Name="Dividend per Share _FY 1 _Inc Statement Currency" Type="float" />
+          <Property Name="Dividend per Share _FY 2 _Inc Statement Currency" Type="float" />
+          <Property Name="Dividend per Share _FY 3 _Inc Statement Currency" Type="float" />
+          <Property Name="Dividend per Share _FY 4 _Inc Statement Currency" Type="float" />
+          <Property Name="Dividend per Share _FY 5 _Inc Statement Currency" Type="float" />
+          <Property Name="EBT Margin % _1 Yr - FY1" Type="float" />
+          <Property Name="EBT Margin % _1 Yr - FY2" Type="float" />
+          <Property Name="EBT Margin % _1 Yr - FY3" Type="float" />
+          <Property Name="EBT Margin % _1 Yr - FY4" Type="float" />
+          <Property Name="EBT Margin % _1 Yr - FY5" Type="float" />
+          <Property Name="EBT Margin % _1 Yr - FY6" Type="float" />
+          <Property Name="EBT Margin % _1 Yr - FY7" Type="float" />
+          <Property Name="EBT Margin % _1 Yr - FY8" Type="float" />
+          <Property Name="EBT Margin % _1 Yr - FY9" Type="float" />
+          <Property Name="EBT Margin % _1 Yr - FY10" Type="float" />
+          <Property Name="EPS _FY 1 _Inc Statement Currency" Type="float" />
+          <Property Name="EPS _FY 10 _Inc Statement Currency" Type="float" />
+          <Property Name="EPS _FY 2 _Inc Statement Currency" Type="float" />
+          <Property Name="EPS _FY 3 _Inc Statement Currency" Type="float" />
+          <Property Name="EPS _FY 4 _Inc Statement Currency" Type="float" />
+          <Property Name="EPS _FY 5 _Inc Statement Currency" Type="float" />
+          <Property Name="EPS _FY 6 _Inc Statement Currency" Type="float" />
+          <Property Name="EPS _FY 7 _Inc Statement Currency" Type="float" />
+          <Property Name="EPS _FY 8 _Inc Statement Currency" Type="float" />
+          <Property Name="EPS _FY 9 _Inc Statement Currency" Type="float" />
+          <Property Name="FCF Growth % _1 Yr - FY1" Type="float" />
+          <Property Name="FCF Growth % _1 Yr - FY2" Type="float" />
+          <Property Name="FCF Growth % _1 Yr - FY3" Type="float" />
+          <Property Name="FCF Growth % _1 Yr - FY4" Type="float" />
+          <Property Name="FCF Growth % _1 Yr - FY5" Type="nvarchar" MaxLength="255" />
+          <Property Name="FCF Growth % _1 Yr - FY6" Type="nvarchar" MaxLength="255" />
+          <Property Name="FCF Growth % _1 Yr - FY7" Type="float" />
+          <Property Name="FCF Growth % _1 Yr - FY8" Type="float" />
+          <Property Name="FCF Growth % _1 Yr - FY9" Type="float" />
+          <Property Name="FCF Growth % _1 Yr - FY10" Type="float" />
+          <Property Name="Financial Leverage _1 Yr - _FY1" Type="float" />
+          <Property Name="Financial Leverage _1 Yr - _FY2" Type="float" />
+          <Property Name="Financial Leverage _1 Yr - _FY3" Type="float" />
+          <Property Name="Financial Leverage _1 Yr - _FY4" Type="float" />
+          <Property Name="Financial Leverage _1 Yr - _FY5" Type="float" />
+          <Property Name="Financial Leverage _1 Yr - _FY6" Type="float" />
+          <Property Name="Financial Leverage _1 Yr - _FY7" Type="float" />
+          <Property Name="Financial Leverage _1 Yr - _FY8" Type="float" />
+          <Property Name="Financial Leverage _1 Yr - _FY9" Type="float" />
+          <Property Name="Financial Leverage _1 Yr - _FY10" Type="float" />
+          <Property Name="Net Income (cont ops) _Growth % _1 Yr - FY1" Type="float" />
+          <Property Name="Net Income (cont ops) _Growth % _1 Yr - FY2" Type="float" />
+          <Property Name="Net Income (cont ops) _Growth % _1 Yr - FY3" Type="float" />
+          <Property Name="Net Income (cont ops) _Growth % _1 Yr - FY4" Type="float" />
+          <Property Name="Net Income (cont ops) _Growth % _1 Yr - FY5" Type="float" />
+          <Property Name="Net Income (cont ops) _Growth % _1 Yr - FY6" Type="float" />
+          <Property Name="Net Income (cont ops) _Growth % _1 Yr - FY7" Type="float" />
+          <Property Name="Net Income (cont ops) _Growth % _1 Yr - FY8" Type="float" />
+          <Property Name="Net Income (cont ops) _Growth % _1 Yr - FY9" Type="float" />
+          <Property Name="Net Income (cont ops) _Growth % _1 Yr - FY10" Type="float" />
+          <Property Name="Net Margin % _1 Yr - FY1" Type="float" />
+          <Property Name="Net Margin % _1 Yr - FY2" Type="float" />
+          <Property Name="Net Margin % _1 Yr - FY3" Type="float" />
+          <Property Name="Net Margin % _1 Yr - FY4" Type="float" />
+          <Property Name="Net Margin % _1 Yr - FY5" Type="float" />
+          <Property Name="Net Margin % _1 Yr - FY6" Type="float" />
+          <Property Name="Net Margin % _1 Yr - FY7" Type="float" />
+          <Property Name="Net Margin % _1 Yr - FY8" Type="float" />
+          <Property Name="Net Margin % _1 Yr - FY9" Type="float" />
+          <Property Name="Net Margin % _1 Yr - FY10" Type="float" />
+          <Property Name="Revenue Growth % _1 Yr - FY1" Type="float" />
+          <Property Name="Revenue Growth % _1 Yr - FY2" Type="float" />
+          <Property Name="Revenue Growth % _1 Yr - FY3" Type="float" />
+          <Property Name="Revenue Growth % _1 Yr - FY4" Type="float" />
+          <Property Name="Revenue Growth % _1 Yr - FY5" Type="float" />
+          <Property Name="Revenue Growth % _1 Yr - FY6" Type="float" />
+          <Property Name="Revenue Growth % _1 Yr - FY7" Type="float" />
+          <Property Name="Revenue Growth % _1 Yr - FY8" Type="float" />
+          <Property Name="Revenue Growth % _1 Yr - FY9" Type="float" />
+          <Property Name="Revenue Growth % _1 Yr - FY10" Type="float" />
+        </EntityType>-->
+        <EntityType Name="Historic_NSE_Date">
+          <Key>
+            <PropertyRef Name="PK" />
+          </Key>
+          <Property Name="PK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ticker" Type="varchar" MaxLength="10" />
+          <Property Name="Date_of_Price" Type="datetime" />
+          <Property Name="Open_Price" Type="float" />
+          <Property Name="Close_Price" Type="float" />
+          <Property Name="percent_change" Type="float" />
+          <Property Name="Volume" Type="float" />
+        </EntityType>
+        <EntityType Name="India_GDP">
+          <Key>
+            <PropertyRef Name="PK" />
+          </Key>
+          <Property Name="PK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date_of_GDP" Type="datetime" />
+          <Property Name="GDP" Type="float" />
+        </EntityType>
+        <EntityType Name="MACD">
+          <Key>
+            <PropertyRef Name="PK" />
+          </Key>
+          <Property Name="PK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ticker" Type="varchar" MaxLength="10" />
+          <Property Name="Date_of_Price" Type="datetime" />
+          <Property Name="signal" Type="float" />
+          <Property Name="MACD" Type="float" />
+        </EntityType>
+        <EntityType Name="RSI">
+          <Key>
+            <PropertyRef Name="pk" />
+          </Key>
+          <Property Name="pk" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ticker" Type="varchar" MaxLength="10" />
+          <Property Name="date_t" Type="datetime" />
+          <Property Name="RSI" Type="float" />
+        </EntityType>
+        <EntityType Name="Stocks">
+          <Key>
+            <PropertyRef Name="ticker" />
+          </Key>
+          <Property Name="company" Type="varchar" MaxLength="1" />
+          <Property Name="ticker" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="shares" Type="int" />
+          <Property Name="purchase_price" Type="money" />
+          <Property Name="current_price" Type="money" />
+          <Property Name="purchase_date" Type="date" />
+          <Property Name="unrealized" Type="money" />
+        </EntityType>
+        <EntityType Name="US_Yield">
+          <Key>
+            <PropertyRef Name="PK" />
+          </Key>
+          <Property Name="PK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date_of_Bond" Type="datetime" />
+          <Property Name="one_mo" Type="float" />
+          <Property Name="three_mo" Type="float" />
+          <Property Name="six_mo" Type="float" />
+          <Property Name="one_yr" Type="float" />
+          <Property Name="two_yr" Type="float" />
+          <Property Name="three_yr" Type="float" />
+          <Property Name="five_yr" Type="float" />
+          <Property Name="seven_yr" Type="float" />
+          <Property Name="ten_yr" Type="float" />
+          <Property Name="twenty_yr" Type="float" />
+          <Property Name="thirty_yr" Type="float" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="Historic_NSE_Date" EntityType="Self.Historic_NSE_Date" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="India_GDP" EntityType="Self.India_GDP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MACD" EntityType="Self.MACD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RSI" EntityType="Self.RSI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Stocks" EntityType="Self.Stocks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="US_Yield" EntityType="Self.US_Yield" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Bachlor_EssayEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Historic_NSE_Date" EntityType="Model.Historic_NSE_Date" />
+          <EntitySet Name="India_GDP" EntityType="Model.India_GDP" />
+          <EntitySet Name="MACDs" EntityType="Model.MACD" />
+          <EntitySet Name="RSIs" EntityType="Model.RSI" />
+          <EntitySet Name="Stocks" EntityType="Model.Stock" />
+          <EntitySet Name="US_Yield" EntityType="Model.US_Yield" />
+        </EntityContainer>
+        <EntityType Name="Historic_NSE_Date">
+          <Key>
+            <PropertyRef Name="PK" />
+          </Key>
+          <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ticker" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Date_of_Price" Type="DateTime" Precision="3" />
+          <Property Name="Open_Price" Type="Double" />
+          <Property Name="Close_Price" Type="Double" />
+          <Property Name="percent_change" Type="Double" />
+          <Property Name="Volume" Type="Double" />
+        </EntityType>
+        <EntityType Name="India_GDP">
+          <Key>
+            <PropertyRef Name="PK" />
+          </Key>
+          <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date_of_GDP" Type="DateTime" Precision="3" />
+          <Property Name="GDP" Type="Double" />
+        </EntityType>
+        <EntityType Name="MACD">
+          <Key>
+            <PropertyRef Name="PK" />
+          </Key>
+          <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ticker" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Date_of_Price" Type="DateTime" Precision="3" />
+          <Property Name="signal" Type="Double" />
+          <Property Name="MACD1" Type="Double" />
+        </EntityType>
+        <EntityType Name="RSI">
+          <Key>
+            <PropertyRef Name="pk" />
+          </Key>
+          <Property Name="pk" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ticker" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="date_t" Type="DateTime" Precision="3" />
+          <Property Name="RSI1" Type="Double" />
+        </EntityType>
+        <EntityType Name="Stock">
+          <Key>
+            <PropertyRef Name="ticker" />
+          </Key>
+          <Property Name="company" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ticker" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="shares" Type="Int32" />
+          <Property Name="purchase_price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="current_price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="purchase_date" Type="DateTime" Precision="0" />
+          <Property Name="unrealized" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="US_Yield">
+          <Key>
+            <PropertyRef Name="PK" />
+          </Key>
+          <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date_of_Bond" Type="DateTime" Precision="3" />
+          <Property Name="one_mo" Type="Double" />
+          <Property Name="three_mo" Type="Double" />
+          <Property Name="six_mo" Type="Double" />
+          <Property Name="one_yr" Type="Double" />
+          <Property Name="two_yr" Type="Double" />
+          <Property Name="three_yr" Type="Double" />
+          <Property Name="five_yr" Type="Double" />
+          <Property Name="seven_yr" Type="Double" />
+          <Property Name="ten_yr" Type="Double" />
+          <Property Name="twenty_yr" Type="Double" />
+          <Property Name="thirty_yr" Type="Double" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Bachlor_EssayEntities">
+          <EntitySetMapping Name="Historic_NSE_Date">
+            <EntityTypeMapping TypeName="Model.Historic_NSE_Date">
+              <MappingFragment StoreEntitySet="Historic_NSE_Date">
+                <ScalarProperty Name="Volume" ColumnName="Volume" />
+                <ScalarProperty Name="percent_change" ColumnName="percent_change" />
+                <ScalarProperty Name="Close_Price" ColumnName="Close_Price" />
+                <ScalarProperty Name="Open_Price" ColumnName="Open_Price" />
+                <ScalarProperty Name="Date_of_Price" ColumnName="Date_of_Price" />
+                <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+                <ScalarProperty Name="PK" ColumnName="PK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="India_GDP">
+            <EntityTypeMapping TypeName="Model.India_GDP">
+              <MappingFragment StoreEntitySet="India_GDP">
+                <ScalarProperty Name="GDP" ColumnName="GDP" />
+                <ScalarProperty Name="Date_of_GDP" ColumnName="Date_of_GDP" />
+                <ScalarProperty Name="PK" ColumnName="PK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MACDs">
+            <EntityTypeMapping TypeName="Model.MACD">
+              <MappingFragment StoreEntitySet="MACD">
+                <ScalarProperty Name="MACD1" ColumnName="MACD" />
+                <ScalarProperty Name="signal" ColumnName="signal" />
+                <ScalarProperty Name="Date_of_Price" ColumnName="Date_of_Price" />
+                <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+                <ScalarProperty Name="PK" ColumnName="PK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RSIs">
+            <EntityTypeMapping TypeName="Model.RSI">
+              <MappingFragment StoreEntitySet="RSI">
+                <ScalarProperty Name="RSI1" ColumnName="RSI" />
+                <ScalarProperty Name="date_t" ColumnName="date_t" />
+                <ScalarProperty Name="ticker" ColumnName="ticker" />
+                <ScalarProperty Name="pk" ColumnName="pk" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Stocks">
+            <EntityTypeMapping TypeName="Model.Stock">
+              <MappingFragment StoreEntitySet="Stocks">
+                <ScalarProperty Name="unrealized" ColumnName="unrealized" />
+                <ScalarProperty Name="purchase_date" ColumnName="purchase_date" />
+                <ScalarProperty Name="current_price" ColumnName="current_price" />
+                <ScalarProperty Name="purchase_price" ColumnName="purchase_price" />
+                <ScalarProperty Name="shares" ColumnName="shares" />
+                <ScalarProperty Name="ticker" ColumnName="ticker" />
+                <ScalarProperty Name="company" ColumnName="company" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="US_Yield">
+            <EntityTypeMapping TypeName="Model.US_Yield">
+              <MappingFragment StoreEntitySet="US_Yield">
+                <ScalarProperty Name="thirty_yr" ColumnName="thirty_yr" />
+                <ScalarProperty Name="twenty_yr" ColumnName="twenty_yr" />
+                <ScalarProperty Name="ten_yr" ColumnName="ten_yr" />
+                <ScalarProperty Name="seven_yr" ColumnName="seven_yr" />
+                <ScalarProperty Name="five_yr" ColumnName="five_yr" />
+                <ScalarProperty Name="three_yr" ColumnName="three_yr" />
+                <ScalarProperty Name="two_yr" ColumnName="two_yr" />
+                <ScalarProperty Name="one_yr" ColumnName="one_yr" />
+                <ScalarProperty Name="six_mo" ColumnName="six_mo" />
+                <ScalarProperty Name="three_mo" ColumnName="three_mo" />
+                <ScalarProperty Name="one_mo" ColumnName="one_mo" />
+                <ScalarProperty Name="Date_of_Bond" ColumnName="Date_of_Bond" />
+                <ScalarProperty Name="PK" ColumnName="PK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
