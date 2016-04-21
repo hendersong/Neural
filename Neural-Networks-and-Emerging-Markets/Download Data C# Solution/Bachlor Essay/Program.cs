@@ -13,15 +13,23 @@ namespace Bachlor_Essay
 {
     class Program
     {
+        /* THis program downloads historic India GDP data, historic U.S. Bond Yields, and historic prices for all tickers on the NSE (Indian Stock Exchange). It calculates the RSI, MACD and Signal line
+        for the historic prices for each stock, and inserts all the above data into a SQL database.
+        Last Edited: 4/21/2016
+        Created by: Gabe Henderson
+        */
+
         static void Main(string[] args)
         {
+            //connect to database through Entity Relationship
             Bachlor_EssayEntities db = new Bachlor_EssayEntities();
+            //url for Quandl Data
             string india_GDP = "https://www.quandl.com/api/v3/datasets/ODA/IND_NGDPD.csv?start_date=2000-01-01?auth_token=B8sK7V6UPsviYsy4pNFF";
             string us_yield = "https://www.quandl.com/api/v3/datasets/USTREASURY/YIELD.csv?start_date=2000-01-01?auth_token=B8sK7V6UPsviYsy4pNFF";
 
             //actually download
-            //Download_Macro(india_GDP, db);
-            //download_us_bond_yields(us_yield, db);
+            Download_Macro(india_GDP, db);
+            download_us_bond_yields(us_yield, db);
             Download_prices(db);
 
             
@@ -31,6 +39,7 @@ namespace Bachlor_Essay
         }
         static void download_us_bond_yields(string URL, Bachlor_EssayEntities db)
         {
+            //connect to quandl
             WebClient streamUrl = new WebClient();
             streamUrl.BaseAddress = URL;
             string URI = URL;
@@ -39,11 +48,13 @@ namespace Bachlor_Essay
 
             while (reader.Peek() > 0)
             {
+                //download the split the returned string
                 string s = reader.ReadLine();
                 
                 string[] data= s.Split(',');
                 US_Yield g = new US_Yield();
                 double c;
+                //make sure you arent getting headers, if its a number push to database
                 bool can = double.TryParse(data[1], out c);
                 if (!can)
                 {
